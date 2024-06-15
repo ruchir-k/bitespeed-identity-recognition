@@ -1,4 +1,4 @@
-package identify.entities
+package bitespeed.ir.core.api.models.identify.entities
 
 data class IdentifyResponse(
     val contact: Contact

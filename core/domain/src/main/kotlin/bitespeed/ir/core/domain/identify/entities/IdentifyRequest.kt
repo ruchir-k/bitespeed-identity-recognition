@@ -1,4 +1,4 @@
-package identify.entities
+package bitespeed.ir.core.domain.identify.entities
 
 data class IdentifyRequest(
     val email: String?,

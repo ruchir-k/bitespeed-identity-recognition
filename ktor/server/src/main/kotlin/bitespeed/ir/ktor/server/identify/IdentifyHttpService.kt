@@ -1,8 +1,8 @@
 package bitespeed.ir.ktor.server.identify
 
-import identify.exceptions.IdentifyException
-import identify.entities.IdentifyRequest
-import identify.IdentifyService
+import bitespeed.ir.core.api.models.identify.exceptions.IdentifyException
+import bitespeed.ir.core.api.models.identify.entities.IdentifyRequest
+import bitespeed.ir.core.api.service.identify.usecases.IdentifyService
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.request.*

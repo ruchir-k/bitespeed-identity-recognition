@@ -24,6 +24,10 @@ dependencies {
     implementation(project(":core-api-service"))
 }
 
+application{
+    mainClass.set("bitespeed.ir.ktor.server.appserver.MainApplication.kt")
+}
+
 tasks.test {
     useJUnitPlatform()
 }

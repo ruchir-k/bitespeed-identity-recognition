@@ -1,4 +1,4 @@
-package identify.exceptions
+package bitespeed.ir.core.api.models.identify.exceptions
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 

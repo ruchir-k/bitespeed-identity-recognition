@@ -14,6 +14,8 @@ dependencies {
     implementation("com.google.dagger:dagger:2.50")
     annotationProcessor("com.google.dagger:dagger-compiler:2.50")
     kapt("com.google.dagger:dagger-compiler:2.50")
+
+    implementation(project(":core-api-models"))
 }
 
 tasks.test {

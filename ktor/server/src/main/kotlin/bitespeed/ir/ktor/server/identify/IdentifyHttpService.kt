@@ -16,11 +16,20 @@ constructor(
 ) {
     suspend fun invoke(call: ApplicationCall) {
         val request: IdentifyRequest = call.receive()
+        if (!isValidRequest(request)) {
+            call.respond(HttpStatusCode.BadRequest, "Invalid request")
+            return
+        }
+
         try {
             val result = identifyService.invoke(request)
             call.respond(HttpStatusCode.OK, result)
         } catch (e: IdentifyException) {
             call.respond(HttpStatusCode.UnprocessableEntity, e)
         }
+    }
+
+    private fun isValidRequest(request: IdentifyRequest): Boolean {
+        return request.email != null || request.phoneNumber != null
     }
 }

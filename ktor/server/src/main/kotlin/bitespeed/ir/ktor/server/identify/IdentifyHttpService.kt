@@ -14,35 +14,21 @@ import javax.inject.Inject
 class IdentifyHttpService
 @Inject
 constructor(
-//    private val identifyService: IdentifyService
+    private val identifyService: IdentifyService
 ) {
     suspend fun invoke(call: ApplicationCall) {
-//        val request: IdentifyRequest = call.receive()
-//        if (!isValidRequest(request)) {
-//            call.respond(HttpStatusCode.BadRequest, "Invalid request")
-//            return
-//        }
-//
-//        try {
-//            val result = identifyService.invoke(request)
-//            call.respond(HttpStatusCode.OK, result)
-//        } catch (e: IdentifyException) {
-//            call.respond(HttpStatusCode.UnprocessableEntity, e)
-//        }
-        println("IdentifyHttpService invoked")
+        val request: IdentifyRequest = call.receive()
+
+        if (!isValidRequest(request)) {
+            call.respond(HttpStatusCode.BadRequest, "Invalid request")
+            return
+        }
+
         try {
-            call.respond(HttpStatusCode.OK,
-                IdentifyResponse(
-                    contact = Contact(
-                        primaryContactId = 1,
-                        emails = listOf("abc@gmail.com"),
-                        phoneNumbers = listOf("1234567890"),
-                        secondaryContactIds = listOf(2, 3, 4)
-                    )
-                ))
-            println("IdentifyHttpService responded")
-        } catch (e: Exception) {
-            println("Exception while responding: ${e.message}")
+            val result = identifyService.invoke(request)
+            call.respond(HttpStatusCode.OK, result)
+        } catch (e: IdentifyException) {
+            call.respond(HttpStatusCode.UnprocessableEntity, e)
         }
 
     }

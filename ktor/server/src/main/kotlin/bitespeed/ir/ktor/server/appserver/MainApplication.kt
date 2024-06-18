@@ -20,13 +20,8 @@ fun main() {
 
 
         routing {
-            get("/") {
-                call.respond(OK, Unit)
-            }
             post("/identify") {
                 withTimeout(5000) { // Timeout of 5 seconds
-                    val identifyHttpService: IdentifyHttpService = IdentifyHttpService()
-                    identifyHttpService.invoke(call)
                 }
             }
         }

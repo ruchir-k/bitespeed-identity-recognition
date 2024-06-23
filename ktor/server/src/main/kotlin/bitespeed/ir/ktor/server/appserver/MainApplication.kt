@@ -22,8 +22,7 @@ fun main() {
 
         routing {
             post("/identify") {
-                withTimeout(5000) { // Timeout of 5 seconds
-                }
+                rootComponent.identifyHttpService.invoke(call)
             }
         }
     }.start(wait = true)

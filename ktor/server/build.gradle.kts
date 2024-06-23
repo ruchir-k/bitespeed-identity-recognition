@@ -29,6 +29,8 @@ dependencies {
 
     implementation(project(":core-api-models"))
     implementation(project(":core-api-service"))
+    implementation(project(":core-domain"))
+    implementation(project(":core-data-psql"))
 }
 
 application{

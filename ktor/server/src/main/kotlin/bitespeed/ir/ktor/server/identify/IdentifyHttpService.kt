@@ -18,7 +18,7 @@ constructor(
 ) {
     suspend fun invoke(call: ApplicationCall) {
         val request: IdentifyRequest = call.receive()
-        println("request: $request")
+
 //        if (!isValidRequest(request)) {
 //            call.respond(HttpStatusCode.BadRequest, "Invalid request")
 //            return
@@ -32,7 +32,6 @@ constructor(
 //        }
 
         try {
-            println("IdentifyHttpService started")
             call.respond(HttpStatusCode.OK,
                 IdentifyResponse(
                     contact = Contact(

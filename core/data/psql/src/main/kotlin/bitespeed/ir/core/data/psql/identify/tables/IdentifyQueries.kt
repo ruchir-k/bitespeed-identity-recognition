@@ -1,4 +1,4 @@
-package bitespeed.ir.core.data.psql.tables
+package bitespeed.ir.core.data.psql.identify.tables
 
 import javax.inject.Inject
 

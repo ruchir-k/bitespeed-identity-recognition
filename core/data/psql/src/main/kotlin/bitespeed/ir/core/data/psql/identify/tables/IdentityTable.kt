@@ -1,4 +1,4 @@
-package bitespeed.ir.core.data.psql.tables
+package bitespeed.ir.core.data.psql.identify.tables
 
 import org.jetbrains.exposed.sql.Table
 import org.jetbrains.exposed.sql.javatime.datetime

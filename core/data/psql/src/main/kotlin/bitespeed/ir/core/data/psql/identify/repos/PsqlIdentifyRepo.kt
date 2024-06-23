@@ -1,4 +1,4 @@
-package bitespeed.ir.core.data.psql.repos
+package bitespeed.ir.core.data.psql.identify.repos
 
 import bitespeed.ir.core.domain.identify.entities.IdentifyResponse
 import bitespeed.ir.core.domain.identify.entities.IdentifyTypeWithIds

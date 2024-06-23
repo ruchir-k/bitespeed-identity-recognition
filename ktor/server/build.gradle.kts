@@ -14,6 +14,7 @@ repositories {
 
 dependencies {
     implementation("io.ktor:ktor-server-core:2.3.11")
+    implementation("io.ktor:ktor-server-status-pages:2.3.11")
     implementation("io.ktor:ktor-server-netty:2.3.11")
     implementation("io.ktor:ktor-server-content-negotiation:2.3.7")
     implementation ("io.ktor:ktor-serialization:2.3.7")
@@ -29,6 +30,8 @@ dependencies {
 
     implementation(project(":core-api-models"))
     implementation(project(":core-api-service"))
+    implementation(project(":core-domain"))
+    implementation(project(":core-data-psql"))
 }
 
 application{

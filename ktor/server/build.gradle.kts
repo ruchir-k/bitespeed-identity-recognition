@@ -26,6 +26,7 @@ dependencies {
     implementation ("org.jetbrains.exposed:exposed-core:0.41.1")
     implementation( "org.jetbrains.exposed:exposed-dao:0.41.1")
     implementation ("org.jetbrains.exposed:exposed-jdbc:0.41.1")
+    implementation("org.postgresql:postgresql:42.2.6")
 
     implementation(project(":core-api-models"))
     implementation(project(":core-api-service"))
